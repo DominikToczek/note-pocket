@@ -17,7 +17,16 @@ const color = document.querySelector('#noteColor');
 
 
 window.onload = function(){
-    storageArray = JSON.parse(localStorage.getItem('notes'));
+    let notesArray = JSON.parse(localStorage.getItem('notes'));
+    if( notesArray != null)
+    {
+        storageArray = notesArray;
+    }
+    else
+    {
+        storageArray = [];
+    }
+    LoadNotes();
 }
 
 function ClearNewNote()
@@ -27,6 +36,19 @@ function ClearNewNote()
     color.value = "#868629";
 }
 
+function LoadNotes()
+{
+    for(let i=0; i<storageArray.length; i++)
+    {
+        let noteTitle = "#noteTitle" + storageArray[i].ID;
+        let noteContent = "#noteContent" + storageArray[i].ID;
+        let noteColor = "#note" + storageArray[i].ID;
+        document.querySelector(noteTitle).innerHTML = storageArray[i].title;
+        document.querySelector(noteContent).innerHTML = storageArray[i].content;
+        document.querySelector(noteColor).style.background = storageArray[i].color;
+    }
+}
+
 function AddNewNote(noteID)
 {
     let noteTitle = "#noteTitle" + noteID;
@@ -34,7 +56,7 @@ function AddNewNote(noteID)
     let noteColor = "#note" + noteID;
     let note = new Note(title.value, content.value, color.value, noteID);
     storageArray.push(note);
-    localStorage.setItem('notes', JSON.stringify(storageArray))
+    localStorage.setItem('notes', JSON.stringify(storageArray));
     ClearNewNote();
     document.querySelector(noteTitle).innerHTML = note.title;
     document.querySelector(noteContent).innerHTML = note.content;
@@ -49,6 +71,21 @@ function DeleteNote(noteID)
     document.querySelector(noteTitle).innerHTML = "";
     document.querySelector(noteContent).innerHTML = "";
     document.querySelector(noteColor).style.background = "#868629";
+    storageArray.splice(getNoteIndex(noteID),1);
+    localStorage.setItem('notes', JSON.stringify(storageArray));
+}
+
+function getNoteIndex(ID)
+{
+    let index;
+    for (let i=0; i<storageArray.length-1; i++)
+    {
+        if (storageArray[i].ID == ID)
+        {
+            index = i;
+        }
+    }
+    return index;
 }
 
 
