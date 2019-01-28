@@ -7,14 +7,40 @@ body {
     align-items: center;
 }
 
+.note-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.new-note-box {
+    width: 300px;
+    margin-top: 150px;
+    background: #FFFFD8;
+    margin-right: 100px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.new-note-box-title {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.new-note-form {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
 .note-box {
     padding: 50px;
     background: #FFFFD8;
-    width: 1200px;
+    width: 1000px;
     margin-top: 150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 .note-column {
@@ -36,6 +62,30 @@ body {
     transition: all 0.2s ease-out;
 }
 
+.note-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
 .note:hover {
     background: rgba(0, 0, 0, 0.1);
+}
+
+.note-text {
+    word-wrap: break-word;
+}
+
+.note-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.note-buttons button {
+    margin: 0px 10px;
+}
+
+.note-buttons button:hover {
+    cursor: pointer;
 }

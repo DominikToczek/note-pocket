@@ -8,80 +8,103 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="note-box">
-        <div class="note-column">
-            <div class="note">
-                <div class="note-title">
-                    Tytul
-                </div>
-                <div class="note-text">
-                    jakas tam notatka
-                </div>
-                <div class="note-date">
-                    04-01-2019 10:40
-                </div>
+    <div class="note-container">
+        <div class="new-note-box">
+            <div class="new-note-box-title">New Note</div>
+            <div class="new-note-form">
+                Title:<input name="Title" id="noteTitle"><br>
+                Content:<textarea id="noteContent" name="Content" cols="50" rows="4" maxlength="200" name="Content"></textarea><br>
+                Color:  <select name="Color" id="noteColor">
+                            <option value="#868629" selected>Default</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Green">Green</option>
+                            <option value="Blue">Blue</option>
+                            <option value="White">White</option>
+                        </select>
             </div>
-            <div class="note">
-                <div class="note-title">
-                    Tytul
-                </div>
-                <div class="note-text">
-                    jakas tam notatka <br>
-                    ale jest dłuższa
-                </div>
-                <div class="note-date">
-                    04-01-2019 10:40
-                </div>
-            </div>
-            <div class="note">
-                <div class="note-title">
-                    Tytul
-                </div>
-                <div class="note-text">
-                    jakas tam notatka
-                </div>
-                <div class="note-date">
-                    04-01-2019 10:40
-                </div>
-            </div>
+
         </div>
-        <div class="note-column">
-            <div class="note">
-                <div class="note-title">
-                    Tytul
+        <div class="note-box">
+            <div class="note-column">
+                <div class="note" id="note1">
+                    <div class="note-title" id="noteTitle1"></div>
+                    <div class="note-text" id="noteContent1"></div>
+                    <div class="note-date" id="noteDate1"></div>
+                    <div class="note-buttons"><button id="add1">Dodaj</button><button id="delete1">Usuń</button></div>
                 </div>
-                <div class="note-text">
-                    jakas tam notatka <br>
-                    ciekawe czy będzie działać JS <br>
+                <div class="note" id="note5">
+                    <div class="note-title" id="noteTitle5"></div>
+                    <div class="note-text" id="noteContent5"></div>
+                    <div class="note-date" id="noteDate5"></div>
+                    <div class="note-buttons"><button id="add5">Dodaj</button><button id="delete5">Usuń</button></div>
                 </div>
-                <div class="note-date">
-                    04-01-2019 10:40
-                </div>
-            </div>
-            <div class="note">
-                <div class="note-title">
-                    Tytul
-                </div>
-                <div class="note-text">
-                    jakas tam notatka <br>
-                    no ale ta notatka <br>
-                    to jest najdłuższa <br>
-                    ze wszystkich notatek <br>
-                    jakie tutaj są <br>
-                </div>
-                <div class="note-date">
-                    04-01-2019 10:40
+                <div class="note" id="note9">
+                    <div class="note-title" id="noteTitle9"></div>
+                    <div class="note-text" id="noteContent9"></div>
+                    <div class="note-date" id="noteDate9"></div>
+                    <div class="note-buttons"><button id="add9">Dodaj</button><button id="delete9">Usuń</button></div>
                 </div>
             </div>
-        </div>
-        <div class="note-column">
-            
-        </div>
-        <div class="note-column">
-            
-        </div>
-        <div class="note-column">
-            
+            <div class="note-column">
+                <div class="note" id="note2">
+                    <div class="note-title" id="noteTitle2"></div>
+                    <div class="note-text" id="noteContent2"></div>
+                    <div class="note-date" id="noteDate2"></div>
+                    <div class="note-buttons"><button id="add2">Dodaj</button><button id="delete2">Usuń</button></div>
+                </div>
+                <div class="note" id="note6">
+                    <div class="note-title" id="noteTitle6"></div>
+                    <div class="note-text" id="noteContent6"></div>
+                    <div class="note-date" id="noteDate6"></div>
+                    <div class="note-buttons"><button id="add6">Dodaj</button><button id="delete6">Usuń</button></div>
+                </div>
+                <div class="note" id="note10">
+                    <div class="note-title" id="noteTitle10"></div>
+                    <div class="note-text" id="noteContent10"></div>
+                    <div class="note-date" id="noteDate10"></div>
+                    <div class="note-buttons"><button id="add10">Dodaj</button><button id="delete10">Usuń</button></div>
+                </div>
+            </div>
+            <div class="note-column">
+                <div class="note" id="note3">
+                    <div class="note-title" id="noteTitle3"></div>
+                    <div class="note-text" id="noteContent3"></div>
+                    <div class="note-date" id="noteDate3"></div>
+                    <div class="note-buttons"><button id="add3">Dodaj</button><button id="delete3">Usuń</button></div>
+                </div>
+                <div class="note" id="note7">
+                    <div class="note-title" id="noteTitle7"></div>
+                    <div class="note-text" id="noteContent7"></div>
+                    <div class="note-date" id="noteDate7"></div>
+                    <div class="note-buttons"><button id="add7">Dodaj</button><button id="delete7">Usuń</button></div>
+                </div>
+                <div class="note" id="note11">
+                    <div class="note-title" id="noteTitle11"></div>
+                    <div class="note-text" id="noteContent11"></div>
+                    <div class="note-date" id="noteDate11"></div>
+                    <div class="note-buttons"><button id="add11">Dodaj</button><button id="delete11">Usuń</button></div>
+                </div>
+            </div>
+            <div class="note-column">
+                <div class="note" id="note4">
+                    <div class="note-title" id="noteTitle4"></div>
+                    <div class="note-text" id="noteContent4"></div>
+                    <div class="note-date" id="noteDate4"></div>
+                    <div class="note-buttons"><button id="add4">Dodaj</button><button id="delete4">Usuń</button></div>
+                </div>
+                <div class="note" id="note8">
+                    <div class="note-title" id="noteTitle8"></div>
+                    <div class="note-text" id="noteContent8"></div>
+                    <div class="note-date" id="noteDate8"></div>
+                    <div class="note-buttons"><button id="add8">Dodaj</button><button id="delete8">Usuń</button></div>
+                </div>
+                <div class="note" id="note12">
+                    <div class="note-title" id="noteTitle12"></div>
+                    <div class="note-text" id="noteContent12"></div>
+                    <div class="note-date" id="noteDate12"></div>
+                    <div class="note-buttons"><button id="add12">Dodaj</button><button id="delete12">Usuń</button></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
