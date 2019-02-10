@@ -18,6 +18,7 @@ body {
     background: #FFFFD8;
     margin-right: 100px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    max-height: 367px;
 }
 .new-note-box-title {
     font-size: 30px;
@@ -33,14 +34,9 @@ body {
 }
 
 .note-box {
-    padding: 50px;
-    background: #FFFFD8;
-    width: 1000px;
-    margin-top: 150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 .note-column {
@@ -88,4 +84,35 @@ body {
 
 .note-buttons button:hover {
     cursor: pointer;
+}
+
+.note-pin-row {
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5px;
+}
+
+.note-box-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding: 50px;
+    background: #FFFFD8;
+    width: 1000px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.note-pin {
+    width: 210px;
+    min-width: 210px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #868629;
+    margin-left: 5px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    transition: all 0.2s ease-out;
 }
