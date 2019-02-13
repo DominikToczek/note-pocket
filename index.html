@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Note Pocket</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
     <div class="note-container">
@@ -15,11 +16,15 @@
                 Title:<input name="Title" id="noteTitle"><br>
                 Content:<textarea id="noteContent" name="Content" cols="50" rows="4" maxlength="200" name="Content"></textarea><br>
                 Color:  <select name="Color" id="noteColor">
-                            <option value="#868629" selected>Default</option>
+                            <option value="#C0C0C1" selected>Default</option>
                             <option value="Yellow">Yellow</option>
                             <option value="Green">Green</option>
                             <option value="Blue">Blue</option>
+                            <option value="Blueviolet">Violet</option>
                             <option value="White">White</option>
+                            <option value="Darkmagenta">Magenta</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Red">Red</option>
                         </select>
             </div>
 
@@ -30,25 +35,25 @@
                     <div class="note-title" id="noteTitlePin1"></div>
                     <div class="note-text" id="noteContentPin1"></div>
                     <div class="note-date" id="noteDatePin1"></div>
-                    <div class="note-buttons"><button id="unpin1">Odepnij</button></div>
+                    <div class="note-buttons"><button id="unpin1"><i class="fas fa-thumbtack btn-pin" style="color: red"></i></button></div>
                 </div>
                 <div class="note-pin" id="notepin2" style="display:none">
                     <div class="note-title" id="noteTitlePin2"></div>
                     <div class="note-text" id="noteContentPin2"></div>
                     <div class="note-date" id="noteDatePin2"></div>
-                    <div class="note-buttons"><button id="unpin2">Odepnij</button></div>
+                    <div class="note-buttons"><button id="unpin2"><i class="fas fa-thumbtack btn-pin" style="color: red"></i></button></div>
                 </div>
                 <div class="note-pin" id="notepin3" style="display:none">
                     <div class="note-title" id="noteTitlePin3"></div>
                     <div class="note-text" id="noteContentPin3"></div>
                     <div class="note-date" id="noteDatePin3"></div>
-                    <div class="note-buttons"><button id="unpin3">Odepnij</button></div>
+                    <div class="note-buttons"><button id="unpin3"><i class="fas fa-thumbtack btn-pin" style="color: red"></i></button></div>
                 </div>
                 <div class="note-pin" id="notepin4" style="display:none">
                     <div class="note-title" id="noteTitlePin4"></div>
                     <div class="note-text" id="noteContentPin4"></div>
                     <div class="note-date" id="noteDatePin4"></div>
-                    <div class="note-buttons"><button id="unpin4">Odepnij</button></div>
+                    <div class="note-buttons"><button id="unpin4"><i class="fas fa-thumbtack btn-pin" style="color: red"></i></button></div>
                 </div>
             </div>
             <div class="note-box">
@@ -57,19 +62,19 @@
                         <div class="note-title" id="noteTitle1"></div>
                         <div class="note-text" id="noteContent1"></div>
                         <div class="note-date" id="noteDate1"></div>
-                        <div class="note-buttons"><button id="add1">Dodaj</button><button id="delete1">Usuń</button><button id="pin1">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add1"><i class="fas fa-plus btn-plus"></i></button><button id="delete1"><i class="fas fa-minus btn-minus"></i></button><button id="pin1"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note5">
                         <div class="note-title" id="noteTitle5"></div>
                         <div class="note-text" id="noteContent5"></div>
                         <div class="note-date" id="noteDate5"></div>
-                        <div class="note-buttons"><button id="add5">Dodaj</button><button id="delete5">Usuń</button><button id="pin5">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add5"><i class="fas fa-plus btn-plus"></i></button><button id="delete5"><i class="fas fa-minus btn-minus"></i></button><button id="pin5"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note9">
                         <div class="note-title" id="noteTitle9"></div>
                         <div class="note-text" id="noteContent9"></div>
                         <div class="note-date" id="noteDate9"></div>
-                        <div class="note-buttons"><button id="add9">Dodaj</button><button id="delete9">Usuń</button><button id="pin9">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add9"><i class="fas fa-plus btn-plus"></i></button><button id="delete9"><i class="fas fa-minus btn-minus"></i></button><button id="pin9"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                 </div>
                 <div class="note-column">
@@ -77,19 +82,19 @@
                         <div class="note-title" id="noteTitle2"></div>
                         <div class="note-text" id="noteContent2"></div>
                         <div class="note-date" id="noteDate2"></div>
-                        <div class="note-buttons"><button id="add2">Dodaj</button><button id="delete2">Usuń</button><button id="pin2">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add2"><i class="fas fa-plus btn-plus"></i></button><button id="delete2"><i class="fas fa-minus btn-minus"></i></button><button id="pin2"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note6">
                         <div class="note-title" id="noteTitle6"></div>
                         <div class="note-text" id="noteContent6"></div>
                         <div class="note-date" id="noteDate6"></div>
-                        <div class="note-buttons"><button id="add6">Dodaj</button><button id="delete6">Usuń</button><button id="pin6">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add6"><i class="fas fa-plus btn-plus"></i></button><button id="delete6"><i class="fas fa-minus btn-minus"></i></button><button id="pin6"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note10">
                         <div class="note-title" id="noteTitle10"></div>
                         <div class="note-text" id="noteContent10"></div>
                         <div class="note-date" id="noteDate10"></div>
-                        <div class="note-buttons"><button id="add10">Dodaj</button><button id="delete10">Usuń</button><button id="pin10">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add10"><i class="fas fa-plus btn-plus"></i></button><button id="delete10"><i class="fas fa-minus btn-minus"></i></button><button id="pin10"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                 </div>
                 <div class="note-column">
@@ -97,19 +102,19 @@
                         <div class="note-title" id="noteTitle3"></div>
                         <div class="note-text" id="noteContent3"></div>
                         <div class="note-date" id="noteDate3"></div>
-                        <div class="note-buttons"><button id="add3">Dodaj</button><button id="delete3">Usuń</button><button id="pin3">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add3"><i class="fas fa-plus btn-plus"></i></button><button id="delete3"><i class="fas fa-minus btn-minus"></i></button><button id="pin3"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note7">
                         <div class="note-title" id="noteTitle7"></div>
                         <div class="note-text" id="noteContent7"></div>
                         <div class="note-date" id="noteDate7"></div>
-                        <div class="note-buttons"><button id="add7">Dodaj</button><button id="delete7">Usuń</button><button id="pin7">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add7"><i class="fas fa-plus btn-plus"></i></button><button id="delete7"><i class="fas fa-minus btn-minus"></i></button><button id="pin7"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note11">
                         <div class="note-title" id="noteTitle11"></div>
                         <div class="note-text" id="noteContent11"></div>
                         <div class="note-date" id="noteDate11"></div>
-                        <div class="note-buttons"><button id="add11">Dodaj</button><button id="delete11">Usuń</button><button id="pin11">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add11"><i class="fas fa-plus btn-plus"></i></button><button id="delete11"><i class="fas fa-minus btn-minus"></i></button><button id="pin11"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                 </div>
                 <div class="note-column">
@@ -117,19 +122,19 @@
                         <div class="note-title" id="noteTitle4"></div>
                         <div class="note-text" id="noteContent4"></div>
                         <div class="note-date" id="noteDate4"></div>
-                        <div class="note-buttons"><button id="add4">Dodaj</button><button id="delete4">Usuń</button><button id="pin4">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add4"><i class="fas fa-plus btn-plus"></i></button><button id="delete4"><i class="fas fa-minus btn-minus"></i></button><button id="pin4"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note8">
                         <div class="note-title" id="noteTitle8"></div>
                         <div class="note-text" id="noteContent8"></div>
                         <div class="note-date" id="noteDate8"></div>
-                        <div class="note-buttons"><button id="add8">Dodaj</button><button id="delete8">Usuń</button><button id="pin8">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add8"><i class="fas fa-plus btn-plus"></i></button><button id="delete8"><i class="fas fa-minus btn-minus"></i></button><button id="pin8"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                     <div class="note" id="note12">
                         <div class="note-title" id="noteTitle12"></div>
                         <div class="note-text" id="noteContent12"></div>
                         <div class="note-date" id="noteDate12"></div>
-                        <div class="note-buttons"><button id="add12">Dodaj</button><button id="delete12">Usuń</button><button id="pin12">Przypnij</button></div>
+                        <div class="note-buttons"><button id="add12"><i class="fas fa-plus btn-plus"></i></button><button id="delete12"><i class="fas fa-minus btn-minus"></i></button><button id="pin12"><i class="fas fa-thumbtack btn-pin"></i></button></div>
                     </div>
                 </div>
             </div>

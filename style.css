@@ -1,5 +1,5 @@
 body {
-    background: #ECECAA;
+    background: #FCFCFC;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -15,7 +15,7 @@ body {
 .new-note-box {
     width: 300px;
     margin-top: 150px;
-    background: #FFFFD8;
+    background: #7A7A80;
     margin-right: 100px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     max-height: 367px;
@@ -52,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background: #868629;
+    background: #C0C0C1;
     margin: 5px 0px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     transition: all 0.2s ease-out;
@@ -98,7 +98,7 @@ body {
     flex-direction: column;
     margin-top: 150px;
     padding: 50px;
-    background: #FFFFD8;
+    background: #7A7A80;
     width: 1000px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
@@ -109,10 +109,30 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background: #868629;
+    background: #C0C0C1;
     margin-left: 5px;
     margin-right: 15px;
     margin-bottom: 5px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     transition: all 0.2s ease-out;
+}
+
+.btn-plus {
+    color: green;
+    font-size: 18px;
+}
+
+.btn-minus {
+    color: red;
+    font-size: 18px;
+}
+
+.btn-pin {
+    color: dodgerblue;
+    font-size: 18px;
+}
+
+.note-buttons button {
+    background-color: transparent;
+    border: 0px;
 }

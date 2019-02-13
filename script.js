@@ -80,7 +80,7 @@ function DeleteNote(noteID)
     let noteDate = "#noteDate" + noteID;
     document.querySelector(noteTitle).innerHTML = "";
     document.querySelector(noteContent).innerHTML = "";
-    document.querySelector(noteColor).style.background = "#868629";
+    document.querySelector(noteColor).style.background = "#C0C0C1";
     document.querySelector(noteDate).innerHTML = "";
     storageArray.splice(getNoteIndex(noteID),1);
     localStorage.setItem('notes', JSON.stringify(storageArray));
