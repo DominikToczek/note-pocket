@@ -1,5 +1,7 @@
+// klasa notatki
 class Note
 {
+    // konstruktor tworzący nowy obiekt notatki
     constructor (title, content, color, date, ID)
     {
         this.title = title;
@@ -10,14 +12,16 @@ class Note
     }
 }
 
-
+// tablica zawierająca wszystkie notatki
 let storageArray = [];
 const title = document.querySelector('#noteTitle');
 const content = document.querySelector('#noteContent');
 const color = document.querySelector('#noteColor');
+
+// pomocnicza zmienna do funkcji przypinania/odpinania notatek
 let pinCounter = 1;
 
-
+// wczytywanie notatek znajdujących się w localStorage od razu po wczytaniu strony
 window.onload = function(){
     let notesArray = JSON.parse(localStorage.getItem('notes'));
     if( notesArray != null)
@@ -28,9 +32,9 @@ window.onload = function(){
     {
         storageArray = [];
     }
-    LoadNotes();
+    LoadNotes();    // funkcja wyświetlająca notatki pobrane z localStorage
 }
-
+// funkcja czyszcząca pola nowej notatki
 function ClearNewNote()
 {
     title.value = "";
@@ -38,6 +42,7 @@ function ClearNewNote()
     color.value = "#868629";
 }
 
+// funkcja wyświetlająca wszystkie notatki
 function LoadNotes()
 {
     for(let i=0; i<storageArray.length; i++)
@@ -54,6 +59,7 @@ function LoadNotes()
     }
 }
 
+// funkcja dodająca nową notatkę we wskazanym miejscu (noteID)
 function AddNewNote(noteID)
 {
     let date = new Date();
@@ -63,15 +69,16 @@ function AddNewNote(noteID)
     let noteColor = "#note" + noteID;
     let noteDate = "#noteDate" + noteID;
     let note = new Note(title.value, content.value, color.value, date2, noteID);
-    storageArray.push(note);
-    localStorage.setItem('notes', JSON.stringify(storageArray));
-    ClearNewNote();
+    storageArray.push(note);    // dodanie nowo utworzonej notatki do tablicy
+    localStorage.setItem('notes', JSON.stringify(storageArray));    // dodanie elementów tablicy 'storageArray' do localStorage
+    ClearNewNote(); // wyczyszczenie pól nowej notatki
     document.querySelector(noteTitle).innerHTML = note.title;
     document.querySelector(noteContent).innerHTML = note.content;
     document.querySelector(noteColor).style.background = note.color;
     document.querySelector(noteDate).innerHTML = date2;
 }
 
+// funkcja usuwająca wskazaną notatke (noteID)
 function DeleteNote(noteID)
 {
     let noteTitle = "#noteTitle" + noteID;
@@ -82,10 +89,11 @@ function DeleteNote(noteID)
     document.querySelector(noteContent).innerHTML = "";
     document.querySelector(noteColor).style.background = "#C0C0C1";
     document.querySelector(noteDate).innerHTML = "";
-    storageArray.splice(getNoteIndex(noteID),1);
-    localStorage.setItem('notes', JSON.stringify(storageArray));
+    storageArray.splice(getNoteIndex(noteID),1);    // usunięcie notatki z tablicy storageArray
+    localStorage.setItem('notes', JSON.stringify(storageArray));    // uaktualnienie localStorage
 }
 
+// funkcja przypinania wskazanej notatki
 function Pin(noteID)
 {
     let notepin = "notepin" + pinCounter;
@@ -126,6 +134,7 @@ function Pin(noteID)
     }
 }
 
+// funkcja odpinania wskazanej notatki
 function Unpin(notePinID)
 {
     let Title1 = document.querySelector("#noteTitlePin" + notePinID);
@@ -141,6 +150,7 @@ function Unpin(notePinID)
     pinCounter--;
 }
 
+// pomocnicza funkcja zwracająca index notatki(ID) w tablicy storageArray
 function getNoteIndex(ID)
 {
     let index;
